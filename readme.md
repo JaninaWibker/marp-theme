@@ -32,6 +32,9 @@ pnpm build # for building slides (pdf)
   <img src="./.github/assets/screenshot-6-dark.jpg" width="350px" />
 </p>
 
+Also check out the pdf generated from the `slides/test.md` file.
+You can do so by downloading it from the releases tab of this repo.
+
 ## Structure
 
 ```sh
