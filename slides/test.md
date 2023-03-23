@@ -37,36 +37,49 @@ foobar
 _class: invert
 -->
 
-$$\sum^{n}_{i=1} A_i$$
+# Dark mode
 
-- foo
-- bar
+By adding the `.invert` class you switch to dark mode.
 
-1. first
-2. second
+To do this for a single slide add this:
 
-- [ ] task list
-- [x] task list
+```html
+<!--
+_class: invert
+-->
+```
+
+This can be done with frontmatter as well on the first slide, the html comment is the variant which can be placed on any slide.
+
+---
+
+# Basic building blocks
+
+- an unordered list
+- with a few items
+
+1. an ordered list
+2. with a few items
+
+- [x] checkmarks
+- [ ] work too
 
 ---
 
 <!--
-header: Some kind of header!
-footer: A foot note!
 _class: invert
 -->
 
-# Heading 1
+# Basic building blocks
 
-## Heading 2
+- an unordered list
+- with a few items
 
-### Heading 3
+1. an ordered list
+2. with a few items
 
-#### Heading 4
-
-##### Heading 5
-
-###### Heading 6
+- [x] checkmarks
+- [ ] work too
 
 ---
 
@@ -82,6 +95,55 @@ underline: _test_
 strikethrough: ~~test~~
 
 mark: ==test==
+
+---
+
+We got support for latex math mode:
+
+$$
+\sum_{j=0}^{m} b_j \cdot F_p(j)
+  = \fcolorbox{var(--color-highlight-secondary)}{transparent}{$\displaystyle{  b_0 \cdot \sum_{l=0}^{n_p} f^{(l)}(0)  }$}
+  + \fcolorbox{var(--color-accent)}{transparent}{$\displaystyle{  \sum_{j=1}^{m} b_j \cdot \sum_{l=0}^{n_p} f^{(l)}(j)  }$}
+$$
+
+You can reference css variables with KaTeX as well:
+
+```latex
+\fcolorbox{var(--color-highlight-secondary)}{transparent}{
+  the content
+}
+```
+
+---
+
+<!--
+header: 'A header!'
+footer: 'A footer!'
+-->
+
+# Header and Footer
+
+Add a header or footer using
+- `header` (global until overwritten),
+- `_header` (local),
+- `footer` (global until overwritten), or
+- `_footer` (local)
+
+in the frontmatter / html comment.
+
+---
+
+# Heading 1
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+##### Heading 5
+
+###### Heading 6
 
 ---
 
@@ -103,6 +165,30 @@ And more      | With an escaped '\\|'       ||
 ---
 
 <!--
+_footer: ''
+-->
+
+# Light mode code block
+
+```js
+module.exports = function leftpad(str, len, ch) {
+  str = String(str);
+  var i = -1;
+
+  if (!ch && ch !== 0) ch = ' ';
+
+  len = len - str.length;
+
+  while (i++ < len) {
+    str = ch + str;
+  }
+  return str;
+}
+```
+
+---
+
+<!--
 _class: invert
 _footer: ''
 -->
@@ -127,53 +213,9 @@ module.exports = function leftpad(str, len, ch) {
 
 ---
 
-<!--
-_footer: ''
--->
-
-# Dark mode code block
-
-```js
-module.exports = function leftpad(str, len, ch) {
-  str = String(str);
-  var i = -1;
-
-  if (!ch && ch !== 0) ch = ' ';
-
-  len = len - str.length;
-
-  while (i++ < len) {
-    str = ch + str;
-  }
-  return str;
-}
-```
-
----
 
 <!--
-_class: invert
--->
-
-## **Satz**: $e$ ist transzendent
-
-$$
-\sum_{j=0}^{m} b_j \cdot F_p(j)
-  = \fcolorbox{var(--color-highlight-secondary)}{transparent}{$\displaystyle{  b_0 \cdot \sum_{l=0}^{n_p} f^{(l)}(0)  }$}
-  + \fcolorbox{var(--color-accent)}{transparent}{$\displaystyle{  \sum_{j=1}^{m} b_j \cdot \sum_{l=0}^{n_p} f^{(l)}(j)  }$}
-$$
-
-$$
-\fcolorbox{var(--color-accent)}{transparent}{$\displaystyle{
-  \sum_{j=1}^{m} b_j \cdot \sum_{l=0}^{n_p} f^{(l)}(j) = 
-  \sum_{j=1}^{m} b_j \cdot \sum_{l=p}^{n_p} a_{p,j,l} \cdot l!
-}$}
-$$
-
-
----
-
-<!--
+_header: 'Only works in the browser'
 _footer: ''
 _paginate: false
 -->
