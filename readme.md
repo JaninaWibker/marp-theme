@@ -21,14 +21,16 @@ pnpm build # for building slides (pdf)
 
 ## Overview
 
-<img src="./.github/assets/screenshot-1.jpg" width="200px" />
-<img src="./.github/assets/screenshot-1-dark.jpg" width="200px" />
-<img src="./.github/assets/screenshot-2.jpg" width="200px" />
-<img src="./.github/assets/screenshot-3.jpg" width="200px" />
-<img src="./.github/assets/screenshot-4.jpg" width="200px" />
-<img src="./.github/assets/screenshot-5.jpg" width="200px" />
-<img src="./.github/assets/screenshot-6.jpg" width="200px" />
-<img src="./.github/assets/screenshot-6-dark.jpg" width="200px" />
+<p float="left">
+  <img src="./.github/assets/screenshot-1.jpg" width="350px" />
+  <img src="./.github/assets/screenshot-1-dark.jpg" width="350px" />
+  <img src="./.github/assets/screenshot-3.jpg" width="350px" />
+  <img src="./.github/assets/screenshot-3.jpg" width="350px" />
+  <img src="./.github/assets/screenshot-4.jpg" width="350px" />
+  <img src="./.github/assets/screenshot-5.jpg" width="350px" />
+  <img src="./.github/assets/screenshot-6.jpg" width="350px" />
+  <img src="./.github/assets/screenshot-6-dark.jpg" width="350px" />
+</p>
 
 ## Structure
 
