@@ -7,10 +7,10 @@ See the [marp website](https://marp.app/) for a ton more information, especially
 
 [pnpm](https://pnpm.io) was chosen as the package manager, but npm works as a drop-in replacement.
 
-The primary work flow is cloning this repository and using it as a base for your own repo.
+The primary workflow is cloning this repository and using it as a base for your own repo.
 
 ```sh
-git clone <this repo>
+git clone https://github.com/JaninaWibker/marp-theme
 git remote remove origin
 git remote add origin <your repo>
 
@@ -20,6 +20,8 @@ pnpm build # for building slides (pdf)
 ```
 
 ## Overview
+
+Check out the generated PDF in the Releases tab.
 
 <p float="left">
   <img src="./.github/assets/screenshot-1.jpg" width="350px" />
@@ -31,9 +33,6 @@ pnpm build # for building slides (pdf)
   <img src="./.github/assets/screenshot-6.jpg" width="350px" />
   <img src="./.github/assets/screenshot-6-dark.jpg" width="350px" />
 </p>
-
-Also check out the pdf generated from the `slides/test.md` file.
-You can do so by downloading it from the releases tab of this repo.
 
 ## Structure
 
