@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "npx @marp-team/marp-cli@2.2.0 -s",
-    "build": "npx @marp-team/marp-cli@2.2.0"
+    "dev": "npx @marp-team/marp-cli@3.4.0 -s",
+    "build": "npx @marp-team/marp-cli@3.4.0"
   },
   "marp": {
     "inputDir": "./slides/",

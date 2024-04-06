@@ -2,7 +2,7 @@
 _class: lead
 class:
 paginate: true
-_paginate: false
+_paginate: skip
 ---
 
 ![bg left:40% 80%](https://marp.app/assets/marp.svg)
@@ -148,6 +148,16 @@ in the frontmatter / html comment.
 ---
 
 <!--
+_class: lead
+-->
+
+# Title slides
+
+*Add `_class: lead`* to a slide to make it a title slide
+
+---
+
+<!--
 _class: invert
 -->
 
@@ -213,9 +223,84 @@ module.exports = function leftpad(str, len, ch) {
 
 ---
 
+<!--
+_class: lead
+-->
+
+# Page numbers
+
+*See how you can control page numbers*
+
+---
+
+# Page numbers
+
+Use `_paginate: true | false | skip | hold` to control how page numbers are displayed.
+
+`_paginate: true` shows the page number and increments it
+
+---
+
+# Page numbers
+
+Use `_paginate: true | false | skip | hold` to control how page numbers are displayed.
+
+`_paginate: false` hides the page number but still increments it
+
+---
+
+# Page numbers
+
+Use `_paginate: true | false | skip | hold` to control how page numbers are displayed.
+
+`_paginate: skip` hides the page number and doesn't increment it
+
+<br />
+<br />
+
+> You can use this for the title slide
+
+---
+
+# Page numbers
+
+Use `_paginate: true | false | skip | hold` to control how page numbers are displayed.
+
+`_paginate: hold` shows the page number without incrementing it
+
+---
 
 <!--
-_header: 'Only works in the browser'
+_paginate: hold
+_footer: See? the page number didn't change
+-->
+
+# Page numbers
+
+Use `_paginate: true | false | skip | hold` to control how page numbers are displayed.
+
+`_paginate: hold` shows the page number without incrementing it
+
+<br />
+
+> **Animations**: Duplicate slide, add/change content on the second slide. Both slides share the same page number
+
+---
+
+<!--
+_class: lead
+_header: ''
+_footer: ''
+-->
+
+# You can even use videos
+
+*See next slide, only works in the browser*
+
+---
+
+<!--
+_header: ''
 _footer: ''
 _paginate: false
 -->
