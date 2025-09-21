@@ -13,12 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
 
       - name: Setup node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Install menlo font
         run: |
@@ -32,10 +32,10 @@ jobs:
           fc-cache -rfv
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4.1.0
         id: pnpm-install
         with:
-          version: 8
+          version: 10
           run_install: false
 
       - name: Get pnpm cache directory
@@ -45,7 +45,7 @@ jobs:
           echo "directory=$(pnpm store path)" >> $GITHUB_OUTPUT
 
       - name: Cache pnpm dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4.2.4
         with:
           path: ${{ steps.pnpm-cache.outputs.directory }}
           key: ${{ runner.os }}-pnpm-cache-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -59,7 +59,7 @@ jobs:
         run: pnpm build
 
       - name: Create artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: PDF
           path: "output/${{ env.OUTPUT_FILE_NAME }}"
@@ -71,12 +71,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v5
         with:
           name: PDF
           path: output
       - name: Create Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2.3.3
         with:
           draft: false
           files: "output/${{ env.OUTPUT_FILE_NAME }}"
